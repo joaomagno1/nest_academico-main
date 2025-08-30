@@ -6,10 +6,10 @@ export class ConverterCidade {
   static toCidade(CidadeRequest: CidadeRequest) {
     const cidade = new Cidade();
 
-    cidade.idCidade = CidadeRequest.idCidade;
+    cidade.idCidade = CidadeRequest.idCidade ?? 0;
     cidade.nomeCidade = CidadeRequest.nomeCidade;
     cidade.codCidade = CidadeRequest.codCidade;
-
+    
     return cidade;
   }
   static toCidadeResponse(cidade: Cidade) {
@@ -17,6 +17,7 @@ export class ConverterCidade {
 
     cidadeResponse.codCidade = cidade.codCidade;
     cidadeResponse.nomeCidade = cidade.nomeCidade;
+    cidadeResponse.idCidade = cidade.idCidade ?? 0;
 
     return cidadeResponse;
   }
