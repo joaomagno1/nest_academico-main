@@ -13,7 +13,7 @@ export class CidadeServiceFindOne {
   ) {}
 
   async findOne(idCidade: number): Promise<CidadeResponse | null> {
-    const cidade = await this.cidadeRepository
+    const cidade = await this.findById(idCidade)
       .createQueryBuilder('cidade')
       .where('cidade.ID_CIDADE = :idCidade', { idCidade: idCidade })
       .getOne();
