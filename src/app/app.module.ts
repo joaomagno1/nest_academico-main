@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import * as Joi from 'joi';
+import * as Joi from  'joi';
 import { CidadeModule } from 'src/cidade/cidade.module';
 
 const oracledb = require('oracledb');

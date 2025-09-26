@@ -16,7 +16,7 @@ export class CidadeServiceCreate {
     const newIdCidade = this.cidades.length + 1;
 
     const newCidade = {
-      ...cidade;
+      ...cidade,
       IdCidade: newIdCidade
     };
 

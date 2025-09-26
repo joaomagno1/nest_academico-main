@@ -14,7 +14,6 @@ export class CidadeServiceCreate {
 
   create(cidadeRequest: CidadeRequest) {
     const cidade = ConverterCidade.toCidade(cidadeRequest);
-
     return null;
   }
 }
