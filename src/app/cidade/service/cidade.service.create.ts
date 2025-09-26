@@ -15,11 +15,14 @@ export class CidadeServiceCreate {
 
     const newIdCidade = this.cidades.length + 1;
 
-    cidade.idCidade = newIdCidade;
+    const newCidade = {
+      ...cidade,
+      idCidade: newIdCidade
+    };
 
-    this.cidades.push(cidade);
+    this.cidades.push(newCidade);
 
-    const cidadeResponse = ConverterCidade.toCidadeResponse(cidade);
+    const cidadeResponse = ConverterCidade.toCidadeResponse(newCidade);
 
     return cidadeResponse;
   }
